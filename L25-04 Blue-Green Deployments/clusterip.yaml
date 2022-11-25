@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+ name: svc-front
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: hello-v1
+    # change hello-v1 to hello-v2 for Blue to green deployment
